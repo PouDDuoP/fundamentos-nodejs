@@ -6,7 +6,7 @@ setInterval(function() {
   console.log(i)
   i++
   if ( i == 5 ) {
-    // por ser monohilo mata el proceso
+    // por ser monohilo mata el proceso debido que z no existe
     var a = 3 + z
   }
 }, 1000);
