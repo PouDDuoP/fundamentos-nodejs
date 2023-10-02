@@ -4,7 +4,7 @@ function helloFn(name, myCallback) {
   setTimeout(function () {
     // console.log('Ahora si soy una funcion asincrona');
     console.log('Hola ' + name);
-    myCallback();
+    myCallback(name);
   }, 2000);
 }
 
@@ -31,7 +31,5 @@ helloFn('Kevin', function () {
 byeFn('Adrian',function () {
   console.log('Verificando async bye..')
 })
-
-
 
 // Nota: en javaScript las funciones son elementos de primer nivel,y como son de primer neval los puedo utilizar como paramentros 
