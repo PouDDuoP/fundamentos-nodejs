@@ -9,7 +9,8 @@ function router(req, res) {
 
   switch (req.url) {
     case '/hola':
-      res.write('Hola, que tal');
+      let greet = hello();
+      res.write(greet);
       res.end();
       break;
     default:
@@ -19,9 +20,13 @@ function router(req, res) {
   res.writeHead(201, { 'Content-Type': 'text/plain' });
   
   // respuesta a peticion http desde browser
-  res.write('Hola HTTP de NodeJS')
+  // res.write('Hola HTTP de NodeJS');
 
   res.end();
+}
+
+function hello() {
+  return 'Hola, que tal';
 }
 
 console.log('Escuchando HTTP en puerto 3000');
